@@ -12,6 +12,8 @@ void main() async {
 }
 
 class VoidApp extends StatelessWidget {
+  const VoidApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
