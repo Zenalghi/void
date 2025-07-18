@@ -8,10 +8,10 @@ import '/Screens/chat_screen.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
-  runApp(MyApp());
+  runApp(VoidApp());
 }
 
-class MyApp extends StatelessWidget {
+class VoidApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
@@ -20,9 +20,7 @@ class MyApp extends StatelessWidget {
         title: 'Chat App',
         theme: ThemeData.dark(), // Dark Theme
         home: AuthenticationScreen(),
-        routes: {
-          '/chat': (context) => ChatScreen(),
-        },
+        routes: {'/chat': (context) => ChatScreen()},
       ),
     );
   }
