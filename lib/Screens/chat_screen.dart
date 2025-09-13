@@ -5,6 +5,8 @@ import 'package:flutter/material.dart';
 class ChatScreen extends StatelessWidget {
   final TextEditingController messageController = TextEditingController();
 
+  ChatScreen({super.key});
+
   Future<void> sendMessage(String message) async {
     final currentUser = FirebaseAuth.instance.currentUser;
 
